@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/light.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/background.png" type="Texture" id=4]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+closed = false
+polygon = PoolVector2Array( 441.802, 176.875, 370.976, 111.08, 359.753, 76.6637, 467.491, 87.8864, 516.122, 78.16, 441.985, 177.314 )
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 515.211, 298.895 )
+scale = Vector2( 8.06317, 4.7811 )
+texture = ExtResource( 4 )
+
+[node name="Platform" parent="." instance=ExtResource( 2 )]
+position = Vector2( 93.9372, 592.979 )
+
+[node name="Platform2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 242.391, 591.301 )
+
+[node name="Platform3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 378.265, 587.946 )
+
+[node name="Platform4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 538.461, 528.8 )
+
+[node name="Platform5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 688.593, 462.137 )
+
+[node name="Platform6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 806.015, 583.753 )
+
+[node name="Platform7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 954.469, 546.01 )
+
+[node name="Platform8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 404.265, 234.843 )
+
+[node name="Platform9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 244.908, 251.618 )
+
+[node name="Platform10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 99.8083, 201.294 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 101.161, 406.358 )
+
+[node name="Light2D" type="Light2D" parent="Player"]
+position = Vector2( -1.23779, 0 )
+texture = ExtResource( 3 )
+energy = 0.92
+shadow_enabled = true
+shadow_gradient_length = 1.3
+shadow_filter = 5
+shadow_filter_smooth = 11.1
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2( 100.725, 407.23 )
+occluder = SubResource( 1 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2( 249.211, 335.65 )
+occluder = SubResource( 1 )
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+position = Vector2( -335.621, 78.7166 )
+occluder = SubResource( 1 )
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+position = Vector2( -29.8993, 115.23 )
+occluder = SubResource( 1 )
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
+position = Vector2( -193.9, 126.37 )
+occluder = SubResource( 1 )
